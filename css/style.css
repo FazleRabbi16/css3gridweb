@@ -1,7 +1,7 @@
 :root{
 	--light-bg-color:white;
 	--light-dark-bg-color:rgba(194, 190, 190,0.6);
-	--shadow:3px 4px rgba(184, 183, 180,0.9);
+	--shadow:3px 4px rgba(184, 183, 180,0.7);
 	--dark:rgba(36, 31, 31,0.8);
 }
 
@@ -17,6 +17,7 @@ body{
 	display:grid;
 	grid-gap:20px;
 }
+/*Main navigation section*/ 
 .main_nav ul{
 	display:grid;
 	grid-template-columns:repeat(4,1fr);
@@ -42,6 +43,7 @@ body{
 	background-color:var(--dark);
 	color:white;
 }
+/*all button */
 .btn{
 	font-size:1rem;
 	text-decoration:none;
@@ -52,6 +54,10 @@ body{
 	margin-bottom:5px;
 	text-align:center;
 }
+img{
+	width:100%;
+}
+/*showcas start*/
 #showcase{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -65,8 +71,7 @@ body{
 	justify-content:center;
 	align-items:center;
 	font-size:1.2rem;
-}
-#showcase .showcase_param{
+}#showcase .showcase_param{
 	background-image:url(../img/pic1.jpg);
 	background-size:cover;
 	background-position:bottom;
@@ -74,6 +79,7 @@ body{
 	grid-row:span 2;
 	width:100%;
 }
+
 #showcase .membership{
   background-color:var(--light-dark-bg-color);
   box-shadow:var(--shadow);
@@ -82,6 +88,7 @@ body{
   flex-shrink:2;
   flex-direction:column;
 }
+/*boxes section start*/
 #boxes{
 	display:grid;
 	grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -105,6 +112,60 @@ body{
 #boxes .box p{
 	font-size:15px;
 }
+/*info section start*/
+#info{
+	display:grid;
+	grid-column-gap:30px;
+	grid-template-columns:repeat(2,1fr);
+	margin-left:40px;
+	background-color:var(--light-dark-bg-color);
+	padding:40px;
+    box-shadow:var(--shadow);
+    height:auto;
+}
+#info .para{
+	margin-top:-20px;
+}
+#portfolio{
+	display:grid;
+	grid-gap:20px;
+	grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+	margin-left:40px;
+}
+#portfolio img{
+	width:100%;
+	box-shadow:var(--shadow);
+}
+#footer{
+	background-color:var(--dark);
+	color:white;
+	margin-left:40px;
+	padding:5px;
+	text-align:center;
+	font-size:20px;
+}
+/*media quries*/
+@media  all and (max-width: 700px){
+	#showcase .showcase_param{
+	grid-column:span 4;
+	width:100%;
+	height:35vw;
+      }
+   #showcase .showcase_param p{padding:5px;}
+   #showcase .membership{grid-column:span 2;}
+   #info{grid-template-columns:repeat(1,1fr);grid-row-gap:20px;}
+}
+@media  all and (max-width: 600px){
+    .main_nav ul{
+	grid-template-columns:repeat(1,1fr);
+	grid-row-gap:10px;
+      }
+   #showcase .membership{grid-column:span 4;}
+}
+
+
+
+
 
 
 
